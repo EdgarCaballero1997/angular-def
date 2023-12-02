@@ -1,6 +1,5 @@
 .container-general{
     height: 100vw;
-    /* border: 2px solid black; */
     background-image: url(../../../assets/img/fondo-profile.jpeg);
     display: flex;
     justify-content: center;
@@ -9,7 +8,6 @@
  .container-box{
     width: 90%;
     height: 50%;
-    /* border: 2px solid black; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -19,7 +17,6 @@
         height: 90%;
         border-radius: 7.5px;
         background-color: rgba(255, 255, 255, 0.8);
-        /* border: 2px solid black; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -27,46 +24,94 @@
         .container-information{
             width: 70%;
             height: 90%;
-            border: 2px solid black;
             color: black;
             display: flex;
+            justify-content: space-around;
+            align-items: center;
             flex-direction: column;
         }
+            .color-titulo{
+                color: white;
+                text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+            }
             .nombre{
                 width: 100%;
-                height: 10%;
-                border: 2px solid black;
+                height: 20%;
                 display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
             }
+                .container-inform{
+                    width: 100%;
+                    height: 80%;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                }
             .apellidos{
                 width: 100%;
-                height: 10%;
-                border: 2px solid black;
+                height: 20%;
                 display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
             }
+                .container-inform{
+                    width: 100%;
+                    height: 80%;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                }
             .email{
                 width: 100%;
-                height: 10%;
-                border: 2px solid black;
+                height: 20%;
                 display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
             }
+                .container-inform{
+                    width: 100%;
+                    height: 80%;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                }
             .url{
                 width: 100%;
-                height: 10%;
-                border: 2px solid black;
+                height: 20%;
                 display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
             }
+                .container-inform{
+                    width: 100%;
+                    height: 80%;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                }
     .container-form{
         width: 40%;
-        height: 90%;
+        height: 77%;
         border-radius: 7.5px;
         background-color: rgba(255, 255, 255, 0.8);
-        /* border: 2px solid black; */
         padding: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
+        .titulo-modify{
+            width: 80%;
+            height: 23%;
+            text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+        }
 
 
 .titulo-label{

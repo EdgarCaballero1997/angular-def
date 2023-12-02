@@ -2,44 +2,55 @@
     <div class="container-box">
         <div class="container-info">
             <div class="container-information">
-                <h1>Information</h1>
+                <h1 class="color-titulo">Information</h1>
                 <div class="nombre">
-                    <h4>Nombre: </h4>
+                    <h4>Nombre:</h4>
                     <br>
-                    <p>adfgsdgf</p>
+                    <div class="container-inform">
+                        <p class="sub-nombre">{{user.name}}</p>
+                    </div>
                 </div>
                 <div class="apellidos">
-                    <h4>Apellidos: </h4>
-                    <br>                            <!-- PARA MAÑANA TIENES QUE TERMINAR DE MAQUETAR EL 'CONTAINER INFORMACIÓN' RETO 2 -->
-                    <p>adgbsdgf</p>
+                    <h4>Apellidos:</h4>
+                    <br>
+                    <div class="container-inform">
+                        <p class="sub-apellidos">{{user.last_name}}</p>
+                    </div>
                 </div>
                 <div class="email">
-                    <h4>Email: </h4>
+                    <h4>Email:</h4>
                     <br>
-                    <p>adgbs</p>
+                    <div class="container-inform">
+                        <p class="sub-email">{{user.email}}</p>
+                    </div>
                 </div>
                 <div class="url">
-                    <h4>URL: </h4>
+                    <h4>URL:</h4>
                     <br>
-                    <p>adgsdg</p>
+                    <div class="container-inform">
+                        <p class="sub-url">{{url}}</p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="container-form">
+            <div class="titulo-modify">
+                <h1>Modificar info</h1>
+            </div>
             <form action="" class="formulario-info">
                 <label for="" class="form-label titulo-label">Nombre:</label>
-                <input type="text" class="form-control info-input" name="nombre" placeholder="Introduce tu nombre:">
+                <input type="text" class="form-control info-input" name="nombre" #inputName placeholder="Introduce tu nombre:">
                 <br>
                 <label for="" class="form-label titulo-label">Apellidos:</label>
-                <input type="text" class="form-control info-input" name="apellidos" placeholder="Introduce tus apellidos:">
+                <input type="text" class="form-control info-input" name="apellidos" #inputLastName placeholder="Introduce tus apellidos:">
                 <br>
                 <label for="" class="form-label titulo-label">Email:</label>
-                <input type="email" class="form-control info-input" name="email" placeholder="ejemplo@ejemplo.es">
+                <input type="email" class="form-control info-input" name="email" #inputEmail placeholder="ejemplo@ejemplo.es">
                 <br>
                 <label for="" class="form-label titulo-label">URL</label>
-                <input type="url" class="form-control info-input" name="apellidos" placeholder="https://www.ejemplo.es">
+                <input type="url" class="form-control info-input" name="apellidos" #inputUrl placeholder="www.ejemplo.es">
                 <br>
-                <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4">Modificar</button>
+                <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4" (click)="infoInputs(inputName.value, inputLastName.value, inputEmail.value, inputUrl.value)" >Modificar</button>
             </form>
         </div>
     </div>
