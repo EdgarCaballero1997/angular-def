@@ -1,0 +1,52 @@
+<div class="container-general">
+    <div class="container-card">
+        <ng-container *ngIf="books && books.length > 0; else noBook">
+            <button type="button" class="card" style="width: 18rem;" *ngFor="let book of books; let i = index" [ngClass]="{'even-card': i % 2 === 0, 'odd-card': i % 2 !== 0}">
+                <img src="{{ book.photo }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ book.title }}</h5>
+                    <p class="card-text">Género: {{ book.type }}</p>
+                    <p class="card-text">Precio: {{ book.price | moneda }}</p>
+                    <p class="card-text">Autor: {{ book.author }}</p>
+                    <p class="card-text">ID Libro: {{ book.id_book | referencia }}</p>
+                    <p class="card-text">ID User: {{ book.id_user | referencia }}</p>
+                    <a class="btn btn-danger">X</a>
+                </div>
+            </button>
+        </ng-container>
+        <ng-template #noBook>
+            <h1 class="mostrar">La biblioteca está vacía, introduce un libro desde "addBook"</h1>
+        </ng-template>
+    </div>
+    <div class="container-form">
+        <div class="contenedor-formulario">
+            <div class="container-titulo">
+                <h1>Nuevo libro</h1>
+            </div>
+            <form action="" class="formulario-int form-outline">
+                <label for="" class="title-inputs">Titulo del libro:</label>
+                <input type="text" class="inputs-formulario form-control" name="titulo" placeholder="Ingrese un título:">
+                <br>
+                <label for="" class="title-inputs">Género:</label>
+                <input type="text" class="inputs-formulario form-control" name="genero" placeholder="Ingrese un género:">
+                <br>
+                <label for="" class="title-inputs">Precio:</label>
+                <input type="number" class="inputs-formulario form-control" name="precio" placeholder="Ingrese un precio:">
+                <br>
+                <label for="" class="title-inputs">Autor:</label>
+                <input type="text" class="inputs-formulario form-control" name="autor" placeholder="Ingrese el autor:">
+                <br>
+                <label for="" class="title-inputs">URL portada:</label>
+                <input type="text" class="inputs-formulario form-control" name="url_foto" placeholder="URL imagen (dirección de imagen)">
+                <br>
+                <label for="" class="title-inputs">ID Libro:</label>
+                <input type="number" class="inputs-formulario form-control" name="id_libro" placeholder="Ingrese el ID del libro:">
+                <br>
+                <label for="" class="title-inputs">ID Usuario:</label>
+                <input type="number" class="inputs-formulario form-control" name="id_user" placeholder="Ingrese su ID de usuario:">
+            </form>
+            <br>
+            <button type="submit" class="boton btn btn-primary">Añadir libro</button>
+        </div>
+    </div>
+</div>
