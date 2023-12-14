@@ -1,25 +1,5 @@
 <div class="container-general">
-    <div class="container-card">
-        <app-card [book]="book" (deleteBook)="eliminarLibro($event)" *ngFor="let book of books; let i = index" [ngClass]="{'even-card': i % 2 === 0, 'odd-card': i % 2 !== 0}"></app-card>
-        <!-- <ng-container *ngIf="books && books.length > 0; else noBook">
-            <button type="button" class="card" style="width: 18rem;" *ngFor="let book of books; let i = index" [ngClass]="{'even-card': i % 2 === 0, 'odd-card': i % 2 !== 0}">
-                <img src="{{ book.photo }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{ book.title }}</h5>
-                    <p class="card-text">Género: {{ book.type }}</p>
-                    <p class="card-text">Precio: {{ book.price | moneda }}</p>
-                    <p class="card-text">Autor: {{ book.author }}</p>
-                    <p class="card-text">ID Libro: {{ book.id_book | referencia }}</p>
-                    <p class="card-text">ID User: {{ book.id_user | referencia }}</p>
-                    <a class="btn btn-danger">X</a>
-                </div>
-            </button>
-        </ng-container>
-        <ng-template #noBook>
-            <h1 class="mostrar">La biblioteca está vacía, introduce un libro desde "addBook"</h1>
-        </ng-template> -->
-    </div>
-    <!-- <div class="container-form">
+    <div class="container-form">
         <div class="contenedor-formulario">
             <div class="container-titulo">
                 <h1>Nuevo libro</h1>
@@ -49,5 +29,5 @@
             <br>
             <button type="submit" class="boton btn btn-primary" (click)="infoFormCard(titulo.value, genero.value, precio.value, autor.value, url_foto.value, id_libro.value, id_user.value)">Añadir libro</button>
         </div>
-    </div> -->
+    </div>
 </div>

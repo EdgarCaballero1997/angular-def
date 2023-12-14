@@ -1,0 +1,17 @@
+<ng-container>
+    <button type="button" class="card" style="width: 18rem;">
+        <img src="{{ book.photo }}" class="card-img-top" alt="Portada libro">
+        <div class="card-body">
+            <h5 class="card-title">{{ book.title }}</h5>
+            <p class="card-text">Género: {{ book.type }}</p>
+            <p class="card-text">Precio: {{ book.price | moneda }}</p>
+            <p class="card-text">Autor: {{ book.author }}</p>
+            <p class="card-text">ID Libro: {{ book.id_book | referencia }}</p>
+            <p class="card-text">ID User: {{ book.id_user | referencia }}</p>
+            <a class="btn btn-danger" (click)="onDeleteClick()">X</a>
+        </div>
+    </button>
+</ng-container>
+<ng-template #noBook>
+    <h1 class="mostrar">La biblioteca está vacía, introduce un libro desde "addBook"</h1>
+</ng-template>
