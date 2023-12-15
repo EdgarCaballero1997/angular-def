@@ -1,7 +1,44 @@
-<div class="container-general">
+<!-- ESTE CÓDIGO ES UNA PRUEBA PARA PODER MOSTRAR LA CARD BUSCADA A TRAVÉS DEL "id_book" -->
+<!-- <div class="container-general">
+    <div class="container-search">
+        <input type="number" name="id_book" class="search form-control" #id_book placeholder="ID del libro:">
+        <button type="submit" class="boton btn btn-primary" (click)="info_idBook(id_book)">Buscar libro</button>
+    </div>
     <div class="container-card">
-        <app-card [book]="book" (deleteBook)="eliminarLibro($event)" *ngFor="let book of books; let i = index" [ngClass]="{'even-card': i % 2 === 0, 'odd-card': i % 2 !== 0}"></app-card>
-        <!-- <ng-container *ngIf="books && books.length > 0; else noBook">
+      <ng-container *ngIf="searchedBook; else bookList">
+        <app-card *ngIf="searchedBook; else noBook" [book]="searchedBook" (deleteBook)="eliminarLibro(searchedBook.id_book)"></app-card>
+        <ng-template #noBook>
+          <h1 class="mostrar">No se encontró ningún libro con el ID introducido</h1>
+        </ng-template>
+      </ng-container>
+      <ng-template #bookList>
+        <ng-container *ngIf="books; else noBook">
+          <app-card *ngFor="let book of books; let i = index" [book]="book" (deleteBook)="eliminarLibro(book.id_book)" [ngClass]="{'even-card': i % 2 === 0, 'odd-card': i % 2 !== 0}"></app-card>
+        </ng-container>
+        <ng-template #noBook>
+          <h1 class="mostrar">La biblioteca está vacía, introduce un libro desde "addBook"</h1>
+        </ng-template>
+      </ng-template>
+    </div>
+  </div> -->
+  
+  <div class="container-general">
+    <input type="number" name="id_book" class="search form-control" #id_book placeholder="ID del libro:">
+    <button type="submit" class="boton btn btn-primary" (click)="info_idBook(id_book.value)">Buscar libro</button>
+    <div class="container-card">
+        <ng-container *ngIf="books; else noBook">
+            <app-card *ngFor="let book of books; let i = index" [book]="book" (deleteBook)="eliminarLibro($event)" [ngClass]="{'even-card': i % 2 === 0, 'odd-card': i % 2 !== 0}"></app-card>
+        </ng-container>
+        <ng-template #noBook>
+            <h1 class="mostrar">La biblioteca está vacía, introduce un libro desde "addBook"</h1>
+        </ng-template>
+        <!-- INFO 1 -->
+    </div>  
+    <!-- INFO 2 -->
+</div>
+
+<!-- INFO 1 -->
+<!-- <ng-container *ngIf="books && books.length > 0; else noBook">
             <button type="button" class="card" style="width: 18rem;" *ngFor="let book of books; let i = index" [ngClass]="{'even-card': i % 2 === 0, 'odd-card': i % 2 !== 0}">
                 <img src="{{ book.photo }}" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -18,8 +55,9 @@
         <ng-template #noBook>
             <h1 class="mostrar">La biblioteca está vacía, introduce un libro desde "addBook"</h1>
         </ng-template> -->
-    </div>
-    <!-- <div class="container-form">
+
+<!-- INFO 2 -->
+<!-- <div class="container-form">
         <div class="contenedor-formulario">
             <div class="container-titulo">
                 <h1>Nuevo libro</h1>
@@ -50,4 +88,3 @@
             <button type="submit" class="boton btn btn-primary" (click)="infoFormCard(titulo.value, genero.value, precio.value, autor.value, url_foto.value, id_libro.value, id_user.value)">Añadir libro</button>
         </div>
     </div> -->
-</div>

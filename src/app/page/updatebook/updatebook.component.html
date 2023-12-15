@@ -4,7 +4,7 @@
             <div class="container-titulo">
                 <h1>Modificar libro</h1>
             </div>
-            <form action="" class="formulario-int form-outline">
+            <form action="" class="formulario-int form-outline" #updateForm="ngForm">
                 <label for="" class="title-inputs">Titulo del libro:</label>
                 <input type="text" class="inputs-formulario form-control" name="titulo" #tituloMod placeholder="Ingrese un título:">
                 <br>
@@ -27,8 +27,7 @@
                 <input type="number" class="inputs-formulario form-control" name="id_user" #id_userMod placeholder="Ingrese su ID de usuario:">
             </form>
             <br>
-            <button type="submit" class="boton btn btn-primary">Añadir libro</button>
+            <button type="submit" class="boton btn btn-primary" (click)="infoFormMod(tituloMod.value, generoMod.value, precioMod.value, autorMod.value, url_fotoMod.value, id_libroMod.value, id_userMod.value)">Modificar</button>
         </div>
     </div>
 </div>
-<!-- (click)="infoFormMod(tituloMod.value, generoMod.value, precioMod.value, autorMod.value, url_fotoMod.value, id_libroMod.value, id_userMod.value)" -->

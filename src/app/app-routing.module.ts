@@ -5,13 +5,15 @@ import { RegisterComponent } from './page/register/register.component';
 import { ProfileComponent } from './page/profile/profile.component';
 import { BooksComponent } from './page/books/books.component';
 import { AddbookComponent } from './page/addbook/addbook.component';
+import { UpdatebookComponent } from './page/updatebook/updatebook.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'books', component: BooksComponent},
-  {path: 'addbooks', component: AddbookComponent}
+  {path: 'addbooks', component: AddbookComponent},
+  {path: 'updatebook', component: UpdatebookComponent}
 ];
 
 @NgModule({
