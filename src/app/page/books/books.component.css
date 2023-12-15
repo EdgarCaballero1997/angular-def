@@ -5,13 +5,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     flex-direction: column;
 }
+    .container-search{
+        width: 90%;
+        /* border: 2px solid black; */
+        margin: 100px;
+        display: flex;
+        justify-content: center;
+    }
+        .search{
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+        }
+        .boton{
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+        }
     .container-card{
         width: 70%;
         height: auto;
         color: black;
         margin: 70px;
+        /* border: 2px solid black; */
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;

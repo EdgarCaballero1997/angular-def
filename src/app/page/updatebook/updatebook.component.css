@@ -1,0 +1,32 @@
+.container-general{
+    height: 100vw;
+    background-image: url(../../../assets/img/fondo-books.webp);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+    .container-form{
+        width: 40%;
+        height: 62%;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+        margin: 70px;
+        display: flex;
+        justify-content: center;
+    }
+        .contenedor-formulario{
+            width: 80%;
+            height: 100%;
+            color: black;
+            margin: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+            .container-titulo{
+                margin: 20px;
+                color: white;
+                text-shadow: 1px 4px 8px rgba(0, 0, 0, 0.5);
+                display: flex;
+            }
