@@ -1,0 +1,19 @@
+.container-general{
+    width: 100vw;
+    height: 100vw;
+    background-image: url(../../../assets/img/fondo-login.webp);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .container-form{
+        width: 30%;
+        height: 20%;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }

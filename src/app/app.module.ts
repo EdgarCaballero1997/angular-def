@@ -16,6 +16,8 @@ import { MonedaPipe } from './pipes/moneda.pipe';
 import { CardComponent } from './component/card/card.component';
 import { AddbookComponent } from './page/addbook/addbook.component';
 import { UpdatebookComponent } from './page/updatebook/updatebook.component';
+import { LoginComponent } from './page/login/login.component';
+import { LoginFormComponent } from './component/login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { UpdatebookComponent } from './page/updatebook/updatebook.component';
     CardComponent,
     AddbookComponent,
     UpdatebookComponent,
+    LoginComponent,
+    LoginFormComponent,
   ],
   imports: [
     BrowserModule,
