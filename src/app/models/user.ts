@@ -7,9 +7,10 @@ export class User {
     public photo: string;
     public password: string;
 
-    constructor(name: string, last_name: string, email: string){
+    constructor(name: string, last_name: string, email: string, photo: string){
         this.name = name;
         this.last_name = last_name;
         this.email = email;
+        this.photo = photo;
     }
 }

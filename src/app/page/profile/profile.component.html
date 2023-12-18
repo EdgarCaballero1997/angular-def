@@ -28,7 +28,7 @@
                     <h4>URL:</h4>
                     <br>
                     <div class="container-inform">
-                        <p class="sub-url">{{url}}</p>
+                        <p class="sub-url">{{user.photo}}</p>
                     </div>
                 </div>
             </div>
@@ -48,9 +48,9 @@
                 <input type="email" class="form-control info-input" name="email" #inputEmail placeholder="ejemplo@ejemplo.es">
                 <br>
                 <label for="" class="form-label titulo-label">URL</label>
-                <input type="url" class="form-control info-input" name="apellidos" #inputUrl placeholder="www.ejemplo.es">
+                <input type="url" class="form-control info-input" name="apellidos" #inputUrlPhoto placeholder="www.ejemplo.es">
                 <br>
-                <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4" (click)="infoInputs(inputName.value, inputLastName.value, inputEmail.value, inputUrl.value)" >Modificar</button>
+                <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4" (click)="infoInputs(inputName.value, inputLastName.value, inputEmail.value, inputUrlPhoto.value)" >Modificar</button>
             </form>
         </div>
     </div>
