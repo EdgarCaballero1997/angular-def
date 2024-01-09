@@ -8,23 +8,22 @@ import { User } from 'src/app/models/user';
 })
 export class ProfileComponent {
   
-  public user: User;
-  
-  public name: string;
-  public last_name: string;
-  public email: string;
-  public photo: string;
+  user: User = new User("", "", "", "https://i.pinimg.com/236x/70/71/71/707171e258b8e7a4f875d19aa8ca31ea.jpg", "");
 
   constructor(){
-    this.user = new User(this.name, this.last_name, this.email, this.photo);
+    
   }
 
   infoInputs(name: string, last_name: string, email: string, photo: string){
-    this.user.name = name;
-    console.log(this.user.name);
-    this.user.last_name = last_name;
-    this.user.email = email;
-    this.photo = photo;     // No hay un atributo "URL" en la clase User, no sé qué es exactamente lo que debo hacer, pero hasta que 
-                            // pida ayuda a algún profesor voy a almacenar la URL en un atributo de la clase "ProfileComponent".
+    if(name != "" && last_name != "" && email != "" && photo != "" ){
+      this.user.name = name;
+      this.user.last_name = last_name;
+      this.user.email = email;
+      this.user.photo = photo;
+      console.log(this.user.name);
+    }else{
+      alert("Porfavor, introduce todos los campos");
+    }
   }
+
 }
